@@ -239,7 +239,7 @@ func (q *FileQueue) Open(dir string, queueName string, options *Options) error {
 
 	path := dir + "/" + queueName
 
-	err := os.MkdirAll(path, os.ModeDir)
+	err := os.MkdirAll(path, 755)
 	if err != nil {
 		return err
 	}
